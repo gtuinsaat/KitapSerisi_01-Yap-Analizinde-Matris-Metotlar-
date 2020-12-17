@@ -1,2 +1,58 @@
 %% It is just an empty TeX file.
 %% Write your code here.
+\documentclass{article}% use option titlepage to get the title on a page of its own.
+\usepackage{blindtext}
+\title{Floating Cell Documentation}
+\date{\day}
+\author{William Kotlinski\\Pocar Lab, University of Massachusetts, Amherst}
+\begin{document}
+%\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{Lab Set Up}
+\subsection{Standard Cell}
+[I need to add pictures of the standard cell to this section [Would include close-ups and labels of parts that are discussed]].
+
+The set up used in the lab to calibrate Silicon Photomultipliers is somewhat cumbersome when trying to change the height the Silicon Photomultiplier is from the Americium-241 source. An aluminum bar is attached to the aluminum filler so a) the set up stays centered and b) RTD wires are able to pass underneath. Moreover, due to the SiPM and Am-241 source being held in place by nuts, the cell has to be opened in order to change the distance between the source and the SiPM whenever data for different heights must be taken.This process is rather time consuming and can take up days of data runs. 
+
+In order to increase the amount of data taken [reduce time it takes to change plate height, thus leading to an increase of data being able to be taken], a floating cell is proposed in which the Am-241 source floats on the liquid Xenon above the SiPM.
+\subsection{Floating Cell}
+[I also need to incorporate pictures in this section]
+
+The floating cell is designed to keep some of the parts used in the standard cell. The fused silica window, the copper ring which holds said window,  a majority of the nuts, washers, and bolts, and the aluminum filler (albeit with some modifications). However, it will need a variety of new parts, as well. [NOTE: images will be added for some of the pieces: having each new part would take up lots of unnecessary space]. 
+
+The most noticable difference is the aluminum floater where the Am-241 source would rest. The floater has a diameter of 85mm and a height of 10m, as well as a space for the Am-241 source to rest. The idea behind the floater is to allow the Am-241 to float on the surface of LXe, since aluminum is less dense than LXe. In order to combat bubbles forming, a '+' sign cut is designed in order to vent bubbles away from the Am-241 source so optical properties will not be distorted. Aluminum rods of diameter 5mm will allow for the aluminum float to stay inline with the SiPM, and contract at the same rate as the aluminum float. [Image here] A spring,bar, and "aluminum stopper" will hold the Am-241 source in place. For a list of all dimensions of parts, please view \textit{Section 3} [image as well]. 
+
+In order to insure that the cell actually is floating, the buoyancy of the float system [aluminum float, Am-241 source, spring, source-holding bar, etc] is needed to be calculated. 
+\begin{equation}
+    \vec{F\scriptscriptstyle{g}} = \vec{F\scriptscriptstyle{b}
+\end{equation}} needs to hold in order for an object to float, where $\vec{F\scriptscriptstyle{g}}$is the gravitational force and $\vec{F\scriptscriptstyle{b}}$ is the buoyant force. \begin{equation}
+    \vec{F\scriptscriptstyle{b}} = \rho \vec{g} V 
+ 
+\end{equation} where $\rho$ is density, $\vec{g}$ is gravitational acceleration, and V is volume. What is more important than the volume of the object is the area of the side that rests on the liquid. Equation (2) can be reformatted as \begin{equation}
+       \vec{F\scriptscriptstyle{b}} = \rho \vec{g} h A 
+\end{equation}
+
+    where h is the height of the object and A is the area of the bottom surface. Combining Eq.'s (1) and (2), we get:\begin{equation}
+        \vec{F\scriptscriptstyle{g}} = \rho \vec{g} h A
+        m\vec{g} = \rho \vec{g} h A 
+        m = \rho hA
+    \end{equation}
+    (need to adjust said formatting). As we can see, the mass of the Aluminum float should be equal to the density of the LXe multiplied by the area of the bottom face of the float and the height at which the LXe is displaced, which can be found by rearranging equation (3)
+The next change that is noteworthy is the copper plate which will hold the substrate and SiPM. It has larger holes for the new aluminum rods which will be used in the cell. Moreover, it is somewhat thinner and does not include the 'conical' cut [image will show the difference between th new Cu plate and old Cu plate]. Also, since the fused silica window is resting on top of the copper plate, there is a small gap where gasses and liquids could be trapped. To counter this, small holes will be drilled into the copper plate in order to vent said gap. In order to hold the substrate in place, a copper ring will be in contact with the copper plate and substrate, and will be screwed into the copper plate [also need an image here] allowing for maximum contact/support with the substrate.
+
+As mentioned above, the aluminum filler will stay, but with minor changes. Holes will be drilled vertically through the filler to be able to connect the filler to the bottom of the cell. [Need an image to show]. Although the filler was connected to the bottom of the cell by an aluminum bar, this design is not feasible with the new geometry of the cell. The floating device will now be able to be screwed into the cell from the top of the aluminum filler. To counteract the issue of the RTD, and now SiPM, wires, being forced to snake alongside the aluminum float, semicircle vent holes of 5 mm radius will be cut out of the sides allowing for RTD and SiPM wires to reach the top of the cell without coming in contact with the aluminum float. These holes will have filleted edges in order to ensure the cables are not rubbing against sharp points. These holes will also allow for drainange and entrance of LXe to the interior of the cell. A rod support structure [image] will be screwed into the aluminum filler [separately from the screws that hold the filler to the bottom of the cell] and will have holes which allow the floater/copper plate mounting rods to go through. These rods will then be held in place via washers and nuts. The benefit of this system is that when the aluminum filler is unscrewed from the cell, the rod support can be lifted by its handle, amnd take out the filler and all the underlying cell components. The rod support can then be unfix from the aluminum filler and the mounting rods, so the Am-241 source and SiPM, as well as their respective mounting pieces, can be left by themselves. 
+
+Other pieces that have been changed/added are the substrate, spring, thicker rods, mounting bolts, nuts, and washers. \textit{For a complete, detailed list of parts, please view Section 3}
+
+\subsection{Benefits of Implementing the Floating Cell}
+There are a few benefits of implementing the floating cell. Primarily, saving time between different source-to-SiPM height measurements would potentially allow for runs at different heights within the same day. Because of this, the SiPM would be at less risk to damage due to the cell rarely being opened. Moreover, the aluminum filler is touching the bottom of the cell which is closest to the LN2 resevoir. This means that the entire set up will be able to cool more quickly due to having more contact points to the bottom of the cell, so there is more thermal conductivity. 
+\section{Assemby of the Floating Cell}
+Since a final design is not entirely decided upon, it is difficult to say with certainty what the assembly process would entail. But, I can give a rough outline. The Am-241 will be put into the aluminum float. Then the FS winder/copper plate will be mounted. Followed the substrate and the substrate holder. Then, this set up will be connected to the rod support structure, which will then be screwed into the AL filler. When lowered down into the cell, the aluminum filler will be aligned with the holes in the cell in order to be screwed in. Careful attention will be made to keep the RTD and SiPM wires along the sides of the cell, and to ensure they do not get pinched by the cell.
+
+
+\section{List of Parts}
+This section is not completed, but will include the parts, relevant dimensions, material, and mass. Also, I may make a cross section of the floating cell and have every part colorized so one can see where they lay in the cell; colors would be included in here. Also for washers, nuts, and bolts, their part size will be included.
+
+\end{document}
